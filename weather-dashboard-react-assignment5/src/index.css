@@ -1,0 +1,78 @@
+:root {
+  --bg: #020617;
+  --card: #0f172a;
+  --border: #1e293b;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --green: #22c55e;
+  --yellow: #fbbf24;
+  --red: #f87171;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Fira Sans", Arial, sans-serif;
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--card);
+  color: var(--text);
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+input:focus {
+  outline: 2px solid var(--green);
+}
+
+input[aria-invalid="true"] {
+  border-color: var(--red);
+}
+
+button {
+  padding: 14px 22px;
+  border: none;
+  border-radius: 10px;
+  background: var(--green);
+  color: var(--bg);
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+/* Hidden on screen but still read by screen readers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
